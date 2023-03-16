@@ -5,7 +5,7 @@ public class Radio {
     private int maxStation = 9;
     private int minStation = 0;
     private int currentStation;
-    private int quantityStations = 10;
+    private int quantityStations;
     private int maxVolume = 100;
     private int minVolume = 0;
     private int currentVolume;
@@ -14,9 +14,7 @@ public class Radio {
     }
 
     public Radio(int quantityStations) {
-        this.quantityStations = quantityStations;
-
-
+        this.maxStation = quantityStations - 1;
     }
 
     public int getMaxStation() {
@@ -94,7 +92,6 @@ public class Radio {
         }
         this.currentVolume = currentVolume;
     }
-
 
     public void pressPlusVolume() {
 
